@@ -1,6 +1,6 @@
 # grpc-server-reflection
 
-gRPC server reflection for [`@grpc/grpc-js`](https://www.npmjs.com/package/@grpc/grpc-js)
+gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js gRPC implementation
 
 ## Usage
 ### Generate descriptor set
@@ -20,6 +20,13 @@ import { addReflection } from 'grpc-server-reflection'
 const server = new Server()
 addReflection(server, 'path/to/descriptor_set.bin')
 ```
+
+## Notes
+
+- Reflection can be added before or after registering other services
+- All services from descriptor set are available
+- Server reflection service is not included (unless added manually in the descriptor set)
+- Running tests requires [`grpc_cli`](https://github.com/grpc/grpc/blob/master/doc/command_line_tool.md)
 
 ## Thanks
 
