@@ -1,7 +1,8 @@
 {
   "name": "grpc-server-reflection",
   "version": "0.1.3",
-  "description": "",
+  "description": "gRPC server reflection for Node.js",
+  "keywords": ["grpc", "reflection", "nodejs", "server", "descriptor set", "proto", "service", "introspection"],
   "main": "dist/index.js",
   "scripts": {
     "pretest": "",

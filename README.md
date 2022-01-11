@@ -1,6 +1,9 @@
 # grpc-server-reflection
 
-gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js gRPC implementation
+gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js
+
+[![](https://flat.badgen.net/npm/v/grpc-server-reflection)](https://www.npmjs.com/package/grpc-server-reflection)
+[![](https://flat.badgen.net/github/license/ackeecz/grpc-server-reflection)](https://github.com/ackeecz/grpc-server-reflection/blob/master/LICENSE)
 
 ## Usage
 ### Generate descriptor set
