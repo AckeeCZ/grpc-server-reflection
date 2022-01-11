@@ -1,0 +1,40 @@
+{
+  "name": "grpc-server-reflection",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "",
+    "prebuild": "mkdir -p ./dist && npm run build:reflection && npm run build:route_guide",
+    "build:reflection": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./dist --ts_out=generate_package_definition:./dist --grpc_out=grpc_js:./dist ./proto/reflection.proto",
+    "build:route_guide": "grpc_tools_node_protoc --descriptor_set_out=./dist/proto/route_guide.bin --include_imports --js_out=import_style=commonjs,binary:./dist --ts_out=generate_package_definition:./dist --grpc_out=grpc_js:./dist ./proto/route_guide.proto",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "tap --node-arg=--require=ts-node/register src/**/*.test.ts"
+  },
+  "author": "Jaroslav Šmolík <grissius@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "!route_guide*",
+    "!test",
+    "README.md",
+    "LICENSE",
+    "package*"
+  ],
+  "dependencies": {
+    "google-protobuf": "^3.19.1"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.4.6",
+    "@types/google-protobuf": "^3.15.5",
+    "@types/tap": "^15.0.5",
+    "grpc-tools": "^1.11.2",
+    "grpc_tools_node_protoc_ts": "^5.3.2",
+    "prettier": "^2.5.1",
+    "tap": "^15.1.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
