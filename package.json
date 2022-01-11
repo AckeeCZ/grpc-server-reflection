@@ -2,7 +2,7 @@
   "name": "grpc-server-reflection",
   "version": "0.1.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "pretest": "",
     "prebuild": "mkdir -p ./dist && npm run build:reflection && npm run build:route_guide",
