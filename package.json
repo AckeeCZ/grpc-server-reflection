@@ -1,6 +1,6 @@
 {
   "name": "grpc-server-reflection",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "gRPC server reflection for Node.js",
   "keywords": [
     "grpc",
