@@ -12,6 +12,7 @@
     "service",
     "introspection"
   ],
+  "homepage": "https://github.com/AckeeCZ/grpc-server-reflection",
   "main": "dist/index.js",
   "scripts": {
     "pretest": "",
