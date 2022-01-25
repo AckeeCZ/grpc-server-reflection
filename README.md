@@ -1,11 +1,19 @@
 # grpc-server-reflection
 
-gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js
+gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js.
+
+
+Using the reflection on your server allows your clients to get information regarding available RPCs and their format without actually having the schema definition.
+
+With reflection you can use tools like [grpcurl](https://github.com/fullstorydev/grpcurl) or [wombat](https://github.com/rogchap/wombat) to call and test the API without linking the schema files, but just by accessing the live server.
 
 [![](https://flat.badgen.net/npm/v/grpc-server-reflection)](https://www.npmjs.com/package/grpc-server-reflection)
 [![](https://flat.badgen.net/github/license/ackeecz/grpc-server-reflection)](https://github.com/ackeecz/grpc-server-reflection/blob/master/LICENSE)
 
 ## Usage
+
+The package adds a defined reflection service implementation to your server. The data about your schema is read from a descriptor set, which you can produce with your code generator.
+
 ### Generate descriptor set
 Generate descriptor set with `grpc_tools_node_protoc` using `descriptor_set_out` and `include_imports`, e.g.:
 ```
