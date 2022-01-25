@@ -2,6 +2,7 @@ import { exec } from 'child_process'
 import { Server, ServerCredentials } from '@grpc/grpc-js'
 import { RouteGuideService } from '../../../dist/proto/route_guide_grpc_pb'
 import { addReflection } from '../..'
+import { join } from 'path'
 
 export class TestServer {
   constructor(private server = new Server()) {}
@@ -14,7 +15,7 @@ export class TestServer {
     })
     addReflection(
       this.server,
-      '/home/smolijar/Projects/grpc-mirror/dist/proto/route_guide.bin'
+      join(__dirname, '../../../dist/proto/route_guide.bin')
     )
     return new Promise<void>(resolve => {
       this.server.bindAsync(
