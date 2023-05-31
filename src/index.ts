@@ -64,9 +64,11 @@ class ReflectionHandler {
   public getServiceNames() {
     return this.fileDescriptorSet.getFileList().flatMap(files => {
       const packageName = files.getPackage()
+      const packagePrefix = !packageName ? '' : `${packageName}.`
+
       return files
         .getServiceList()
-        .flatMap(service => `${packageName}.${service.getName()}`)
+        .flatMap(service => `${packagePrefix}${service.getName()}`)
     })
   }
 
