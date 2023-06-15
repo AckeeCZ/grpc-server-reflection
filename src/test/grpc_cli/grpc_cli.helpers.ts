@@ -46,6 +46,9 @@ export class GrpcCli {
         longListing ? '-l' : ''
       }`
     )
+    if (exitCode !== 0) {
+      throw new Error(await GrpcCli.streamToString(stderr))
+    }
     return (await GrpcCli.streamToString(stdout)).trim()
   }
 

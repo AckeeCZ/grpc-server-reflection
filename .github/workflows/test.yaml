@@ -1,0 +1,15 @@
+name: Test
+
+on: push
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - name: Setup gRPC
+        uses: eWaterCycle/setup-grpc@v5
+      - run: npm test
