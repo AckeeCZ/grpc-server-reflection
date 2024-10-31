@@ -1,4 +1,19 @@
-# grpc-server-reflection
+# ⚠️ grpc-server-reflection
+
+---
+
+> **⚠️ This repository is no longer maintained and has been archived for reference purposes.**
+
+### 📌 Important Notes:
+- **🚫 No further updates** will be made.
+- **🛑 Issues and pull requests** are no longer monitored.
+- **⚠️ Use at your own risk** as the code may not meet current standards or may contain vulnerabilities.
+
+For continued use, please **consider forking this repository**.
+
+🙏 Thank you for your interest in this project!
+
+---
 
 gRPC [server reflection](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md) for Node.js.
 
